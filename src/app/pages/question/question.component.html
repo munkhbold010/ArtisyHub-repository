@@ -1,0 +1,104 @@
+<div class="pt-20 pb-10 min-h-screen bg-header-purple bg-[url('/assets/logo/Vector.png')] bg-no-repeat bg-top bg-cover from-purple-900 via-indigo-900 to-blue-900 text-white px-4 md:px-10 lg:px-20">
+<div class="max-w-7xl mx-auto px-4 py-10">
+  <!-- Header -->
+  <div class="text-white text-center py-6 ">
+    <h1 class="text-3xl font-bold tracking-wide">Түгээмэл асуулт, хариулт</h1>
+  </div>
+
+  <!-- FAQ Section -->
+  <div class="px-6 py-10 text-white space-y-4">
+    <!-- 1 -->
+    <div class="rounded-2xl bg-[#1e0d49] p-6 transition-all duration-300 ease-in-out" [ngClass]="{ 'shadow-[0_0_30px_#a855f7]': isQuestion1Open }">
+      <button class="flex justify-between items-center w-full text-left" (click)="toggleQuestion1()">
+        <span class="text-lg font-semibold">01. Хэрхэн уран бүтээлчээр бүртгүүлэх вэ?</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform transition-transform duration-300"
+          [ngClass]="{ 'rotate-180': isQuestion1Open }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div *ngIf="isQuestion1Open" class="mt-4 text-sm text-gray-300 leading-relaxed">
+        Та манай лавлах утас 88979121, 60109810 болон фейсбүүкийн ArtisyHub пейж хуудас руу холбож гэрээ байгуулан уран бүтээлчээр бүртгүүлэх боломжтой.
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="rounded-2xl bg-[#1e0d49] p-6 transition-all duration-300 ease-in-out" [ngClass]="{ 'shadow-[0_0_30px_#a855f7]': isQuestion2Open }">
+      <button class="flex justify-between items-center w-full text-left" (click)="toggleQuestion2()">
+        <span class="text-lg font-semibold">02. Танай апп захиалагчаас шимтгэл авдаг уу?</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform transition-transform duration-300"
+          [ngClass]="{ 'rotate-180': isQuestion2Open }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div *ngIf="isQuestion2Open" class="mt-4 text-sm text-gray-300 leading-relaxed">
+        Бид захиалагч талаас ямар ч шимтгэл авдаггүй.
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="rounded-2xl bg-[#1e0d49] p-6 transition-all duration-300 ease-in-out" [ngClass]="{ 'shadow-[0_0_30px_#a855f7]': isQuestion3Open }">
+      <button class="flex justify-between items-center w-full text-left" (click)="toggleQuestion3()">
+        <span class="text-lg font-semibold">03. Хэрвээ уран бүтээлч захиалсан арга хэмжээнд ирэхгүй бол яах вэ?</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform transition-transform duration-300"
+          [ngClass]="{ 'rotate-180': isQuestion3Open }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div *ngIf="isQuestion3Open" class="mt-4 text-sm text-gray-300 leading-relaxed">
+        Бид таны захиалсан төлбөрийг 100% буцаан олгохоос гадна, тухайн уран бүтээлчид арга хэмжээ авна.
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="rounded-2xl bg-[#1e0d49] p-6 transition-all duration-300 ease-in-out" [ngClass]="{ 'shadow-[0_0_30px_#a855f7]': isQuestion4Open }">
+      <button class="flex justify-between items-center w-full text-left" (click)="toggleQuestion4()">
+        <span class="text-lg font-semibold">04. Хэрвээ уран бүтээлч хоцорч ирвэл яах вэ?</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform transition-transform duration-300"
+          [ngClass]="{ 'rotate-180': isQuestion4Open }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div *ngIf="isQuestion4Open" class="mt-4 text-sm text-gray-300 leading-relaxed">
+        Та уран бүтээлчтэй харилцан тохиролцож үйлчилгээгээ авч болно. Эсвэл уран бүтээлчийн үйлчилгээг авахаас татгалзаж болно. Татгалзсан тохиолдолд таны захиалгын төлбөрийг 100% буцаан олгоно.
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="rounded-2xl bg-[#1e0d49] p-6 transition-all duration-300 ease-in-out" [ngClass]="{ 'shadow-[0_0_30px_#a855f7]': isQuestion5Open }">
+      <button class="flex justify-between items-center w-full text-left" (click)="toggleQuestion5()">
+        <span class="text-lg font-semibold">05. Би захиалсан захиалгаа цуцлаж болох уу?</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform transition-transform duration-300"
+          [ngClass]="{ 'rotate-180': isQuestion5Open }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div *ngIf="isQuestion5Open" class="mt-4 text-sm text-gray-300 leading-relaxed space-y-2">
+        <p>Болноо. Гэхдээ та захиалгаа хэзээ цуцлахаас хамаарч дараах шимтгэлийг захиалсан уран бүтээлчид төлнө:</p>
+        <ul class="list-disc list-inside">
+          <li>7+ хоногийн өмнө: 5%</li>
+          <li>7 хоног дотор: 20%</li>
+          <li>72 цаг дотор: 40%</li>
+          <li>24 цаг дотор: 80%</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="rounded-2xl bg-[#1e0d49] p-6 transition-all duration-300 ease-in-out" [ngClass]="{ 'shadow-[0_0_30px_#a855f7]': isQuestion6Open }">
+      <button class="flex justify-between items-center w-full text-left" (click)="toggleQuestion6()">
+        <span class="text-lg font-semibold">06. Холбоо барих?</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform transition-transform duration-300"
+          [ngClass]="{ 'rotate-180': isQuestion6Open }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div *ngIf="isQuestion6Open" class="mt-4 text-sm text-gray-300 leading-relaxed space-y-1">
+        <p>- Лавлах утас: 889719121, 60109810</p>
+        <p>- Имейл: info</p>
+        <p>- Сошиал: ArtisyHub фейсбүүк пейж хуудас</p>
+        <p>- Хаяг: Хан-уул дүүрэг, Рома хотхон, Иннохаб оффис</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
