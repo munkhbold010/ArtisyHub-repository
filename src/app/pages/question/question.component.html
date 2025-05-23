@@ -17,7 +17,7 @@
         </svg>
       </button>
       <div *ngIf="isQuestion1Open" class="mt-4 text-sm text-gray-300 leading-relaxed">
-        Та манай лавлах утас 88979121, 60109810 болон фейсбүүкийн ArtisyHub пейж хуудас руу холбож гэрээ байгуулан уран бүтээлчээр бүртгүүлэх боломжтой.
+        Та манай лавлах утас 88979121, 60109810 болон фейсбүүкийн “ArtisyHub”пейж хуудас руу холбогдож гэрээ байгуулан уран бүтээлчээр бүртгүүлэх боломжтой.
       </div>
     </div>
 
@@ -45,14 +45,14 @@
         </svg>
       </button>
       <div *ngIf="isQuestion3Open" class="mt-4 text-sm text-gray-300 leading-relaxed">
-        Бид таны захиалсан төлбөрийг 100% буцаан олгохоос гадна, тухайн уран бүтээлчид арга хэмжээ авна.
+         Бид таны захиалсан төлбөрийг 100% буцаан олгохоос гадна, тухайн уран бүтээлчид арга хэмжээ авна.
       </div>
     </div>
 
     <!-- 4 -->
     <div class="rounded-2xl bg-[#1e0d49] p-6 transition-all duration-300 ease-in-out" [ngClass]="{ 'shadow-[0_0_30px_#a855f7]': isQuestion4Open }">
       <button class="flex justify-between items-center w-full text-left" (click)="toggleQuestion4()">
-        <span class="text-lg font-semibold">04. Хэрвээ уран бүтээлч хоцорч ирвэл яах вэ?</span>
+        <span class="text-lg font-semibold">04.  Хэрвээ уран бүтээлч хоцорч ирвэл яах вэ?</span>
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform transition-transform duration-300"
           [ngClass]="{ 'rotate-180': isQuestion4Open }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -66,19 +66,19 @@
     <!-- 5 -->
     <div class="rounded-2xl bg-[#1e0d49] p-6 transition-all duration-300 ease-in-out" [ngClass]="{ 'shadow-[0_0_30px_#a855f7]': isQuestion5Open }">
       <button class="flex justify-between items-center w-full text-left" (click)="toggleQuestion5()">
-        <span class="text-lg font-semibold">05. Би захиалсан захиалгаа цуцлаж болох уу?</span>
+        <span class="text-lg font-semibold">05. Би захиалсан захиалгаа цуцалж болох уу?</span>
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transform transition-transform duration-300"
           [ngClass]="{ 'rotate-180': isQuestion5Open }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
         </svg>
       </button>
       <div *ngIf="isQuestion5Open" class="mt-4 text-sm text-gray-300 leading-relaxed space-y-2">
-        <p>Болноо. Гэхдээ та захиалгаа хэзээ цуцлахаас хамаарч дараах шимтгэлийг захиалсан уран бүтээлчид төлнө:</p>
+        <p>Болноо. Гэхдээ та захиалгаа хэзээ цуцлахаас хамаарч дараах шимтгэлийг захиалсан уран бүтээлчид төлнө.</p>
         <ul class="list-disc list-inside">
-          <li>7+ хоногийн өмнө: 5%</li>
-          <li>7 хоног дотор: 20%</li>
-          <li>72 цаг дотор: 40%</li>
-          <li>24 цаг дотор: 80%</li>
+          <li>Захиалсан арга хэмжээ болохоос 7-с дээш хоногийн өмнө цуцалсан бол 5%-ийн шимтгэл төлнө.</li>
+          <li>Захиалсан арга хэмжээ болохоос 3-7 хоногийн дотор цуцалсан бол захиалсан төлбөрийн 20%-тай тэнцэх хэмжээний мөнгөн дүнгээр уран бүтээлчид шимтгэл төлнө.</li>
+          <li>Захиалсан арга хэмжээ болохоос 24-72 цагийн дотор цуцалсан бол захиалсан төлбөрийн 50%-тай тэнцэх хэмжээний мөнгөн дүнгээр уран бүтээлчид шимтгэл төлнө.</li>
+          <li>Захиалсан арга хэмжээ болохоос 24 цаг дотор цуцалсан бол захиалсан төлбөрийн 80%-тай тэнцэх хэмжээний мөнгөн дүнгээр уран бүтээлчид шимтгэл төлнө.</li>
         </ul>
       </div>
     </div>
@@ -93,10 +93,10 @@
         </svg>
       </button>
       <div *ngIf="isQuestion6Open" class="mt-4 text-sm text-gray-300 leading-relaxed space-y-1">
-        <p>- Лавлах утас: 889719121, 60109810</p>
-        <p>- Имейл: info</p>
+        <p>- Лавлах утас: 88979121, 60109810</p>
+        <p>- Имейл: info@artisyhub.mn</p>
         <p>- Сошиал: ArtisyHub фейсбүүк пейж хуудас</p>
-        <p>- Хаяг: Хан-уул дүүрэг, Рома хотхон, Иннохаб оффис</p>
+        <p>- Хаяг: Хан-уул дүүрэг, рома хотхон, Иннохаб</p>
       </div>
     </div>
   </div>
