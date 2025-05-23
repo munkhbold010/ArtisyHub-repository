@@ -13,4 +13,12 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     initFlowbite();
   }
+
+  // component.ts файлд
+isNavbarOpen = false;
+
+toggleNavbar() {
+  this.isNavbarOpen = !this.isNavbarOpen;
+}
+
 }
