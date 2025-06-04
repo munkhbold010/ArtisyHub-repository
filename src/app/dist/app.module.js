@@ -16,6 +16,8 @@ var home_component_1 = require("./pages/home/home.component");
 var question_component_1 = require("./pages/question/question.component");
 var advantage_component_1 = require("./pages/advantage/advantage.component");
 var about_us_component_1 = require("./pages/about-us/about-us.component");
+var news_component_1 = require("./pages/news/news.component");
+var detail_component_1 = require("./pages/detail/detail.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -27,6 +29,8 @@ var AppModule = /** @class */ (function () {
                 question_component_1.QuestionComponent,
                 advantage_component_1.AdvantageComponent,
                 about_us_component_1.AboutUsComponent,
+                news_component_1.NewsComponent,
+                detail_component_1.DetailComponent,
             ],
             imports: [
                 platform_browser_1.BrowserModule,

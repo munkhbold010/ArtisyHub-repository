@@ -6,28 +6,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 exports.__esModule = true;
-exports.AppComponent = void 0;
+exports.DetailComponent = void 0;
 var core_1 = require("@angular/core");
-var flowbite_1 = require("flowbite");
-var AppComponent = /** @class */ (function () {
-    function AppComponent() {
-        this.title = 'web-app';
-        // component.ts файлд
-        this.isNavbarOpen = false;
+var DetailComponent = /** @class */ (function () {
+    function DetailComponent() {
     }
-    AppComponent.prototype.ngOnInit = function () {
-        flowbite_1.initFlowbite();
-    };
-    AppComponent.prototype.toggleNavbar = function () {
-        this.isNavbarOpen = !this.isNavbarOpen;
-    };
-    AppComponent = __decorate([
+    DetailComponent = __decorate([
         core_1.Component({
-            selector: 'app-root',
-            templateUrl: './app.component.html',
-            styleUrls: ['./app.component.css']
+            selector: 'app-detail',
+            templateUrl: './detail.component.html',
+            styleUrls: ['./detail.component.scss']
         })
-    ], AppComponent);
-    return AppComponent;
+    ], DetailComponent);
+    return DetailComponent;
 }());
-exports.AppComponent = AppComponent;
+exports.DetailComponent = DetailComponent;

@@ -1,0 +1,67 @@
+<div class="pt-20 pb-10 bg-header-purple bg-[url('/assets/logo/Vector.png')] bg-no-repeat bg-top bg-cover from-purple-900 via-indigo-900 to-blue-900 text-white px-4 md:px-20">
+<section class="text-white py-16 px-4">
+
+  <!-- Top grid: 1 big left + 3 small right -->
+  <div class="grid md:grid-cols-4 gap-8">
+    <!-- Big Left News -->
+    <div class="md:col-span-2 bg-[#121248] rounded-2xl overflow-hidden shadow-lg">
+      <img src="/assets/info/info1.png" alt="Featured News" class="w-full h-90 object-cover">
+      <div class="p-6">
+        <h3 class="text-2xl font-bold mb-3">2024 оны хамгийн олон захиалга авсан 5 уран бүтээлч</h3>
+        <p class="text-gray-300 mb-4">ArtisyHub апп ашиглан шинэ жилийн баяраар хамгийн их захиалга авсан уран бүтээлчид.</p>
+        <a [routerLink]="['/news/news1']" class="text-[#DF5BD3] font-medium hover:underline">Дэлгэрэнгүй унших →</a>
+      </div>
+    </div>
+
+    <!-- 3 small news on the right -->
+    <div class="md:col-span-2 grid grid-rows-3 gap-4">
+      <div class="flex flex-col bg-[#121248] rounded-xl overflow-hidden shadow-md">
+        <img src="/assets/info/info2.png" class="w-full h-40 object-cover" />
+        <div class="p-4">
+          <h4 class="font-semibold">Хуримынхаа энтертайментийг яаж зохион байгуулах вэ?</h4>
+          <a href="/news/wedding" class="text-sm text-[#DF5BD3] hover:underline">Дэлгэрэнгүй унших →</a>
+        </div>
+      </div>
+
+      <div class="flex flex-col bg-[#121248] rounded-xl overflow-hidden shadow-md">
+        <img src="/assets/info/info3.png" class="w-full h-40 object-cover" />
+        <div class="p-4">
+          <h4 class="font-semibold">Таны арга хэмжээнд тохирох хөтлөгчийг сонгох 3 алхам</h4>
+          <a href="/news/host-guide" class="text-sm text-[#DF5BD3] hover:underline">Дэлгэрэнгүй унших →</a>
+        </div>
+      </div>
+
+      <div class="flex flex-col bg-[#121248] rounded-xl overflow-hidden shadow-md">
+        <img src="/assets/info/info4.png" class="w-full h-40 object-cover" />
+        <div class="p-4">
+          <h4 class="font-semibold">Аппаар захиалга хийх нь танд юу өгдөг вэ?</h4>
+          <a href="/news/app-benefit" class="text-sm text-[#DF5BD3] hover:underline">Дэлгэрэнгүй унших →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Bottom news in list layout with image left, text right -->
+<div class="flex flex-col gap-6 mt-12">
+  <div class="flex bg-[#121248] rounded-2xl shadow-lg overflow-hidden">
+    <img src="/assets/info/info5.png" alt="News" class="w-48 h-48 object-cover" />
+    <div class="p-6 flex flex-col justify-center">
+      <h3 class="text-xl font-bold mb-2">Ил тод үнэ гэж юу вэ?</h3>
+      <p class="text-gray-300 mb-3">Аппаар захиалах нь уран бүтээлчийн жинхэнэ үнийг ил тод харуулдаг.</p>
+      <a href="/news/pricing-transparency" class="text-[#DF5BD3] hover:underline">Дэлгэрэнгүй унших →</a>
+    </div>
+  </div>
+
+  <div class="flex bg-[#121248] rounded-2xl shadow-lg overflow-hidden">
+    <img src="/assets/info/info6.png" alt="News" class="w-48 h-48 object-cover" />
+    <div class="p-6 flex flex-col justify-center">
+      <h3 class="text-xl font-bold mb-2">Таны мөнгийг хэн хамгаалж байна вэ?</h3>
+      <p class="text-gray-300 mb-3">Баталгаатай захиалга гэдэг нь таны мөнгө, нэр хүндийг хамгаалах систем юм.</p>
+      <a href="/news/payment-protection" class="text-[#DF5BD3] hover:underline">Дэлгэрэнгүй унших →</a>
+    </div>
+  </div>
+</div>
+</section>
+
+</div>
+
