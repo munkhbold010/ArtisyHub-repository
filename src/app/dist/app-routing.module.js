@@ -15,28 +15,61 @@ var question_component_1 = require("./pages/question/question.component");
 var about_us_component_1 = require("./pages/about-us/about-us.component");
 var news_component_1 = require("./pages/news/news.component");
 var detail_component_1 = require("./pages/detail/detail.component");
+var detail1_component_1 = require("./pages/detail1/detail1.component");
+var detail2_component_1 = require("./pages/detail2/detail2.component");
+var detail3_component_1 = require("./pages/detail3/detail3.component");
+var detail4_component_1 = require("./pages/detail4/detail4.component");
+var detail5_component_1 = require("./pages/detail5/detail5.component");
 var routes = [
     {
-        path: '', redirectTo: 'home', pathMatch: 'full'
+        path: "",
+        redirectTo: "home",
+        pathMatch: "full"
     },
     {
-        path: 'home', component: home_component_1.HomeComponent
+        path: "home",
+        component: home_component_1.HomeComponent
     },
     {
-        path: 'news', component: news_component_1.NewsComponent
+        path: "news",
+        component: news_component_1.NewsComponent
     },
     {
-        path: 'news/news1', component: detail_component_1.DetailComponent
+        path: "news/news1",
+        component: detail_component_1.DetailComponent
     },
     {
-        path: 'advantage', component: advantage_component_1.AdvantageComponent
+        path: "news/news2",
+        component: detail1_component_1.Detail1Component
     },
     {
-        path: 'question', component: question_component_1.QuestionComponent
+        path: "news/news3",
+        component: detail2_component_1.Detail2Component
     },
     {
-        path: 'about-us', component: about_us_component_1.AboutUsComponent
-    }
+        path: "news/news4",
+        component: detail3_component_1.Detail3Component
+    },
+    {
+        path: "news/news5",
+        component: detail4_component_1.Detail4Component
+    },
+    {
+        path: "news/news6",
+        component: detail5_component_1.Detail5Component
+    },
+    {
+        path: "advantage",
+        component: advantage_component_1.AdvantageComponent
+    },
+    {
+        path: "question",
+        component: question_component_1.QuestionComponent
+    },
+    {
+        path: "about-us",
+        component: about_us_component_1.AboutUsComponent
+    },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
