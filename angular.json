@@ -28,7 +28,7 @@
             "assets": [
               {
                 "glob": "sitemap.xml",
-                "input": "src",
+                "input": "src/assets",
                 "output": "."
               },
               "src/favicon.ico",
