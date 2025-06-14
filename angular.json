@@ -29,7 +29,7 @@
               {
                 "glob": "sitemap.xml",
                 "input": "src",
-                "output": "/"
+                "output": "."
               },
               "src/favicon.ico",
               "src/assets",
