@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 import { initFlowbite } from 'flowbite';
 
 @Component({
@@ -9,16 +9,24 @@ import { initFlowbite } from 'flowbite';
 })
 export class AppComponent implements OnInit {
   title = 'web-app';
+  isNavbarOpen = false;
+
+  constructor(private titleService: Title, private meta: Meta) {}
 
   ngOnInit(): void {
     initFlowbite();
+
+    // Хуудасны гарчиг (title) тохируулах
+    this.titleService.setTitle("ArtisyHub - Хөтлөгч, дуучин, уран бүтээлчдийн захиалгын платформ");
+
+    // Meta description тохируулах
+    this.meta.updateTag({
+      name: 'description',
+      content: 'ArtisyHub бол бүх төрлийн уран бүтээлчдийг хамгийн хялбараар захиалах боломжтой Монголын хамгийн анхны шилдэг платформ юм.'
+    });
   }
 
-  // component.ts файлд
-isNavbarOpen = false;
-
-toggleNavbar() {
-  this.isNavbarOpen = !this.isNavbarOpen;
-}
-
+  toggleNavbar() {
+    this.isNavbarOpen = !this.isNavbarOpen;
+  }
 }
