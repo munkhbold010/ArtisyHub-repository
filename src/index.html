@@ -6,6 +6,44 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="./assets/logo/Logo.png">
+
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ArtisyHub",
+    "url": "https://www.artisyhub.mn",
+    "logo": "https://www.artisyhub.mn/assets/logo/Logo.png",
+    "sameAs": [
+      "https://www.facebook.com/artisyhub",
+      "https://www.instagram.com/artisyhubapp"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+976-88979121",
+      "contactType": "Customer Support",
+      "areaServed": "MN",
+      "availableLanguage": "Mongolian"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ArtisyHub",
+    "url": "https://www.artisyhub.mn",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.artisyhub.mn/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
 </head>
 <body>
   <app-root></app-root>
