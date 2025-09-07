@@ -69,8 +69,8 @@ export class HomeComponent implements AfterViewInit {
 
 
   ngAfterViewInit() {
-    this.animateCount(this.userCountEl.nativeElement, 35895, 1500);
-    this.animateCount(this.artistCountEl.nativeElement, 322, 1500);
+    this.animateCount(this.userCountEl.nativeElement, 65895, 1500);
+    this.animateCount(this.artistCountEl.nativeElement, 411, 1500);
   }
 
   animateCount(el: HTMLElement, target: number, duration: number) {
