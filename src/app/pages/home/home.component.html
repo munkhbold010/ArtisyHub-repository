@@ -1,0 +1,51 @@
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container hero-layout">
+    <div class="hero-copy">
+      <p class="eyebrow light">УРАН БҮТЭЭЛЧ ЗАХИАЛГЫН ПЛАТФОРМ</p>
+      <h1 id="hero-title">Онцгой мөчид,<br><span>онцгой</span><br>уран бүтээлч.</h1>
+      <p class="hero-description">Хурим, баяр, байгууллагын арга хэмжээ.<br class="desktop-break"> Хүссэн уран бүтээлчээ нэг дороос, хялбараар захиалаарай.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" routerLink="/home" fragment="artists">Уран бүтээлчид үзэх <app-icon name="arrow-right"></app-icon></a>
+        <a class="hero-secondary" routerLink="/home" fragment="how-it-works"><span class="play-button"><app-icon name="play"></app-icon></span>Хэрхэн захиалах вэ?</a>
+      </div>
+      <div class="hero-assurance"><app-icon name="shield"></app-icon><span>Ил тод үнэ. Баталгаатай захиалга.</span></div>
+    </div>
+    <div class="hero-gallery" aria-label="ArtisyHub-ийн уран бүтээлчид">
+      <figure class="portrait portrait-main"><img src="assets/artists/aagiimaa.jpg" alt="Дуучин Агиймаа" width="896" height="896" fetchpriority="high"><figcaption><span>ДУУЧИН</span><strong>Агиймаа</strong></figcaption></figure>
+      <figure class="portrait portrait-top"><img src="assets/artists/yongsub.jpg" alt="Дуучин YoungSub" width="2048" height="1617"><figcaption><span>ДУУЧИН</span><strong>YoungSub</strong></figcaption></figure>
+      <figure class="portrait portrait-bottom"><img src="assets/artists/uugnaa.jpg" alt="Хөтлөгч Ууганаа" width="1080" height="828"><figcaption><span>ХӨТЛӨГЧ</span><strong>Ууганаа</strong></figcaption></figure>
+      <div class="gallery-note"><app-icon name="music"></app-icon><span>Таны баярын<br><strong>хамгийн гоё хэсэг.</strong></span></div>
+    </div>
+  </div>
+  <div class="hero-bottom"><div class="container service-line"><span>ХӨТЛӨГЧ</span><span>ДУУЧИН</span><span>ХӨГЖИМЧИН</span><span>БҮЖИГЧИН</span><span>DJ</span><span>КОМЕДИАН</span><span>ИЛБЭЧИН</span></div></div>
+</section>
+<section class="section container" id="artists" aria-labelledby="artists-title">
+  <div class="section-heading"><div><p class="eyebrow">ТАНЫ ТАЙЗНАА</p><h2 id="artists-title">Хайртай уран бүтээлчээ<br>урьж оролцуулаарай.</h2></div><p class="section-description">Дуучин, хөтлөгч, хамтлаг гээд бүгд нэг дор.<br>Үнэ, боломжит өдрийг апп дээрээс хараарай.</p></div>
+  <div class="category-bar" role="group" aria-label="Уран бүтээлчийн төрлөөр шүүх"><button type="button" *ngFor="let category of categories" class="category-button" [class.selected]="selectedCategory === category" [attr.aria-pressed]="selectedCategory === category" (click)="selectedCategory = category">{{ category }}</button><a class="text-link catalog-link" routerLink="/home" fragment="download">Апп дээр бүгдийг үзэх <app-icon name="arrow-up-right"></app-icon></a></div>
+  <p class="sr-only" role="status" aria-live="polite">{{ artists.length }} уран бүтээлч харагдаж байна.</p>
+  <div class="artist-grid"><a *ngFor="let artist of artists" class="artist-card" routerLink="/home" fragment="download" [attr.aria-label]="artist.name + ' — апп дээрээс үнэ, боломжит өдрийг харах'"><div class="artist-image"><img [src]="artist.image" [alt]="artist.name" loading="lazy" width="600" height="600"><span class="artist-open"><app-icon name="arrow-up-right"></app-icon></span></div><div class="artist-caption"><div><p>{{ artist.category }}</p><h3>{{ artist.name }}</h3></div><app-icon name="arrow-right"></app-icon></div></a></div>
+</section>
+<section class="steps-section" id="how-it-works" aria-labelledby="steps-title"><div class="container section">
+  <div class="section-heading"><div><p class="eyebrow">ЗАХИАЛАХАД АМАРХАН</p><h2 id="steps-title">Дөрвөн алхам.<br>Нэг мартагдашгүй мөч.</h2></div><a class="text-link" routerLink="/question">Түгээмэл асуултууд <app-icon name="arrow-up-right"></app-icon></a></div>
+  <div class="steps-grid">
+    <div class="step"><div class="step-top"><span>01</span><app-icon name="download"></app-icon></div><h3>Аппаа татаарай</h3><p>ArtisyHub аппликейшнийг App Store, Google Play-ээс үнэгүй татна.</p></div>
+    <div class="step"><div class="step-top"><span>02</span><app-icon name="search"></app-icon></div><h3>Уран бүтээлчээ сонго</h3><p>Үйлчилгээний үнэ, мэдээлэл болон боломжит өдөр, цагийг харьцуулаарай.</p></div>
+    <div class="step"><div class="step-top"><span>03</span><app-icon name="send"></app-icon></div><h3>Хүсэлтээ илгээ</h3><p>Арга хэмжээний мэдээллээ оруулна. Уран бүтээлч таны хүсэлтэд хариу өгнө.</p></div>
+    <div class="step"><div class="step-top"><span>04</span><app-icon name="check"></app-icon></div><h3>Захиалгаа баталгаажуул</h3><p>Зөвшөөрсөн хариу ирсний дараа төлбөрөө төлж захиалгаа баталгаажуулна.</p></div>
+  </div>
+</div></section>
+<section class="container section"><div class="trust-panel">
+  <div class="trust-copy"><p class="eyebrow light">ИТГЭЛЦЛЭЭС ЭХЛЭХ ЗАХИАЛГА</p><h2>Та мөчөө бүтээ.<br>Төлбөрөө тайван шийд.</h2><p>Үйлчилгээ үзүүлж, захиалагч баталгаажуулсны дараа төлбөр уран бүтээлчид шилжинэ.</p><a class="button button-white" routerLink="/advantage">ArtisyHub-ийн давуу тал <app-icon name="arrow-up-right"></app-icon></a></div>
+  <div class="trust-features"><div><span class="feature-icon"><app-icon name="shield"></app-icon></span><div><h3>Баталгаатай төлбөр</h3><p>Захиалгын төлбөр платформд хадгалагдана.</p></div></div><div><span class="feature-icon"><app-icon name="calendar"></app-icon></span><div><h3>Ойлгомжтой захиалга</h3><p>Үнэ, өдөр, цагийн мэдээллээ урьдчилан харна.</p></div></div><div><span class="feature-icon"><app-icon name="receipt"></app-icon></span><div><h3>eBarimt авах боломжтой</h3><p>Хувь хүн эсвэл байгууллага дээрээ баримт авна.</p></div></div></div>
+</div></section>
+<section class="container voices-section" aria-labelledby="voices-title">
+  <div class="section-heading"><div><p class="eyebrow">УРАН БҮТЭЭЛЧДИЙН ҮГ</p><h2 id="voices-title">Хамтдаа бүтээж буй итгэл.</h2></div></div>
+  <div class="quotes-grid">
+    <figure class="quote-card"><span class="quote-mark" aria-hidden="true">“</span><blockquote>Уран бүтээлч захиалагч нарын гүүр болсон үнэхээр сайхан аппликейшн.</blockquote><figcaption><img src="assets/artists/tanhai.jpg" alt="" width="52" height="52" loading="lazy"><div><strong>Танхай ерөөлч</strong><span>Уран бүтээлч</span></div></figcaption></figure>
+    <figure class="quote-card"><span class="quote-mark" aria-hidden="true">“</span><blockquote>Санхүүгийн мэдээлэл нь ил тод. Бид ч бас өөрсдийн үнэ, мэдээллээ давхар хянаад явах боломжтой.</blockquote><figcaption><img src="assets/artists/aagiimaa.jpg" alt="" width="52" height="52" loading="lazy"><div><strong>Агиймаа</strong><span>Дуучин</span></div></figcaption></figure>
+    <figure class="quote-card"><span class="quote-mark" aria-hidden="true">“</span><blockquote>Уран бүтээлчдэд үнэхээр хэрэгтэй аппликейшн болсон. Захиалга авахад маш хялбар.</blockquote><figcaption><img src="assets/artists/Lhgwa.jpg" alt="" width="52" height="52" loading="lazy"><div><strong>Лхагва /Мөнхийн реп/</strong><span>Дуучин</span></div></figcaption></figure>
+  </div>
+</section>
+<section class="container section" aria-labelledby="news-title"><div class="section-heading"><div><p class="eyebrow">ARTISYHUB JOURNAL</p><h2 id="news-title">Баяраа төлөвлөхөд тань.</h2></div><a class="text-link" routerLink="/news">Бүх нийтлэл <app-icon name="arrow-up-right"></app-icon></a></div><div class="news-grid"><a class="news-card" *ngFor="let item of news" [routerLink]="item.path"><img [src]="item.image" [alt]="item.title" width="600" height="360" loading="lazy"><div class="news-card-body"><span class="eyebrow">{{ item.category }}</span><h3>{{ item.title }}</h3><span class="read-more">Унших <app-icon name="arrow-up-right"></app-icon></span></div></a></div></section>
+<section class="faq-section"><div class="container faq-layout section"><div><p class="eyebrow">АСУУЛТ БАЙНА УУ?</p><h2>Танд тусалъя.</h2><p class="muted">Захиалга, бүртгэл, төлбөрийн талаар.</p><a class="text-link" routerLink="/question">Бүх асуулт, хариулт <app-icon name="arrow-up-right"></app-icon></a></div><div class="faq-list"><details *ngFor="let faq of faqs"><summary>{{ faq.question }}<app-icon name="plus"></app-icon></summary><div class="faq-answer"><p>{{ faq.answer }}</p></div></details></div></div></section>
+<app-download></app-download>
