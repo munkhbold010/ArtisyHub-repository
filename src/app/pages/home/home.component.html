@@ -2,8 +2,8 @@
   <div class="container hero-layout">
     <div class="hero-copy">
       <p class="eyebrow light">УРАН БҮТЭЭЛЧ ЗАХИАЛГЫН ПЛАТФОРМ</p>
-      <h1 id="hero-title">Онцгой мөчид,<br><span>Онцгой</span><br>уран бүтээлч.</h1>
-      <p class="hero-description">Хурим, баяр, байгууллагын арга хэмжээ.<br class="desktop-break"> Хүссэн уран бүтээлчээ нэг дороос, хялбараар захиалаарай.</p>
+      <h1 id="hero-title">Онцгой мөчид,<br><span>Онцгой</span><br>Уран бүтээлч.</h1>
+      <p class="hero-description">Хурим найр, бүх төрлийн баяр, албан байгууллагын арга хэмжээнд<br class="desktop-break"> Хүссэн уран бүтээлчээ нэг дороос, хялбараар захиалаарай.</p>
       <div class="hero-actions">
         <a class="button button-primary" routerLink="/home" fragment="artists">Уран бүтээлчид үзэх <app-icon name="arrow-right"></app-icon></a>
         <a class="hero-secondary" routerLink="/home" fragment="how-it-works"><span class="play-button"><app-icon name="play"></app-icon></span>Хэрхэн захиалах вэ?</a>
@@ -20,13 +20,13 @@
   <div class="hero-bottom"><div class="container service-line"><span>ХӨТЛӨГЧ</span><span>ДУУЧИН</span><span>ХӨГЖИМЧИН</span><span>БҮЖИГЧИН</span><span>DJ</span><span>КОМЕДИАН</span><span>ИЛБЭЧИН</span></div></div>
 </section>
 <section class="section container" id="artists" aria-labelledby="artists-title">
-  <div class="section-heading"><div><p class="eyebrow">ТАНЫ ТАЙЗНАА</p><h2 id="artists-title">Хайртай уран бүтээлчээ<br>урьж оролцуулаарай.</h2></div><p class="section-description">Дуучин, хөтлөгч, хамтлаг гээд бүгд нэг дор.<br>Үнэ, боломжит өдрийг апп дээрээс хараарай.</p></div>
+  <div class="section-heading"><div><p class="eyebrow">ТАНЫ ТАЙЗНАА</p><h2 id="artists-title">Хайртай уран бүтээлчээ<br>урьж оролцуулаарай</h2></div><p class="section-description">Дуучин, хөтлөгч, хамтлаг гээд бүгд нэг дор.<br>Үнэ, боломжит өдрийг апп дээрээс хараарай.</p></div>
   <div class="category-bar" role="group" aria-label="Уран бүтээлчийн төрлөөр шүүх"><button type="button" *ngFor="let category of categories" class="category-button" [class.selected]="selectedCategory === category" [attr.aria-pressed]="selectedCategory === category" (click)="selectedCategory = category">{{ category }}</button><a class="text-link catalog-link" routerLink="/home" fragment="download">Апп дээр бүгдийг үзэх <app-icon name="arrow-up-right"></app-icon></a></div>
   <p class="sr-only" role="status" aria-live="polite">{{ artists.length }} уран бүтээлч харагдаж байна.</p>
   <div class="artist-grid"><a *ngFor="let artist of artists" class="artist-card" routerLink="/home" fragment="download" [attr.aria-label]="artist.name + ' — апп дээрээс үнэ, боломжит өдрийг харах'"><div class="artist-image"><img [src]="artist.image" [alt]="artist.name" loading="lazy" width="600" height="600"><span class="artist-open"><app-icon name="arrow-up-right"></app-icon></span></div><div class="artist-caption"><div><p>{{ artist.category }}</p><h3>{{ artist.name }}</h3></div><app-icon name="arrow-right"></app-icon></div></a></div>
 </section>
 <section class="steps-section" id="how-it-works" aria-labelledby="steps-title"><div class="container section">
-  <div class="section-heading"><div><p class="eyebrow">ЗАХИАЛАХАД АМАРХАН</p><h2 id="steps-title">Дөрвөн алхам.<br>Нэг мартагдашгүй мөч.</h2></div><a class="text-link" routerLink="/question">Түгээмэл асуултууд <app-icon name="arrow-up-right"></app-icon></a></div>
+  <div class="section-heading"><div><p class="eyebrow">ХЯЛБАР ЗАХИАЛГА</p><h2 id="steps-title">Ердөө <br>Дөрөвхөн алхам</h2></div><a class="text-link" routerLink="/question">Түгээмэл асуултууд <app-icon name="arrow-up-right"></app-icon></a></div>
   <div class="steps-grid">
     <div class="step"><div class="step-top"><span>01</span><app-icon name="download"></app-icon></div><h3>Аппаа татаарай</h3><p>ArtisyHub аппликейшнийг App Store, Google Play-ээс үнэгүй татна.</p></div>
     <div class="step"><div class="step-top"><span>02</span><app-icon name="search"></app-icon></div><h3>Уран бүтээлчээ сонго</h3><p>Үйлчилгээний үнэ, мэдээлэл болон боломжит өдөр, цагийг харьцуулаарай.</p></div>
