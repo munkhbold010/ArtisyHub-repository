@@ -2,13 +2,13 @@
   <div class="container hero-layout">
     <div class="hero-copy">
       <p class="eyebrow light">УРАН БҮТЭЭЛЧ ЗАХИАЛГЫН ПЛАТФОРМ</p>
-      <h1 id="hero-title">Онцгой мөчид,<br><span>Онцгой</span><br>Уран бүтээлч.</h1>
+      <h1 id="hero-title">Онцгой мөчид<br><span>Онцгой</span><br>Уран бүтээлч</h1>
       <p class="hero-description">Хурим найр, бүх төрлийн баяр, албан байгууллагын арга хэмжээнд<br class="desktop-break"> Хүссэн уран бүтээлчээ нэг дороос, хялбараар захиалаарай.</p>
       <div class="hero-actions">
         <a class="button button-primary" routerLink="/home" fragment="artists">Уран бүтээлчид үзэх <app-icon name="arrow-right"></app-icon></a>
         <a class="hero-secondary" routerLink="/home" fragment="how-it-works"><span class="play-button"><app-icon name="play"></app-icon></span>Хэрхэн захиалах вэ?</a>
       </div>
-      <div class="hero-assurance"><app-icon name="shield"></app-icon><span>Ил тод үнэ. Баталгаатай захиалга.</span></div>
+      <div class="hero-assurance"><app-icon name="shield"></app-icon><span>Таны эрсдэлийг бид даана</span></div>
     </div>
     <div class="hero-gallery" aria-label="ArtisyHub-ийн уран бүтээлчид">
       <figure class="portrait portrait-main"><img src="assets/artists/aagiimaa.jpg" alt="Дуучин Агиймаа" width="896" height="896" fetchpriority="high"><figcaption><span>ДУУЧИН</span><strong>Агиймаа</strong></figcaption></figure>
@@ -20,7 +20,7 @@
   <div class="hero-bottom"><div class="container service-line"><span>ХӨТЛӨГЧ</span><span>ДУУЧИН</span><span>ХӨГЖИМЧИН</span><span>БҮЖИГЧИН</span><span>DJ</span><span>КОМЕДИАН</span><span>ИЛБЭЧИН</span></div></div>
 </section>
 <section class="section container" id="artists" aria-labelledby="artists-title">
-  <div class="section-heading"><div><p class="eyebrow">ТАНЫ ТАЙЗНАА</p><h2 id="artists-title">Хайртай уран бүтээлчээ<br>урьж оролцуулаарай</h2></div><p class="section-description">Дуучин, хөтлөгч, хамтлаг гээд бүгд нэг дор.<br>Үнэ, боломжит өдрийг апп дээрээс хараарай.</p></div>
+  <div class="section-heading"><div><p class="eyebrow">ТАНЫ ТАЙЗНАА</p><h2 id="artists-title">Хайртай уран бүтээлчээ<br>Хамгийн хялбараар</h2></div><p class="section-description">Дуучин, хөтлөгч, хамтлаг гээд бүгд нэг дор.<br>Үнэ, боломжит өдрийг апп дээрээс хараарай.</p></div>
   <div class="category-bar" role="group" aria-label="Уран бүтээлчийн төрлөөр шүүх"><button type="button" *ngFor="let category of categories" class="category-button" [class.selected]="selectedCategory === category" [attr.aria-pressed]="selectedCategory === category" (click)="selectedCategory = category">{{ category }}</button><a class="text-link catalog-link" routerLink="/home" fragment="download">Апп дээр бүгдийг үзэх <app-icon name="arrow-up-right"></app-icon></a></div>
   <p class="sr-only" role="status" aria-live="polite">{{ artists.length }} уран бүтээлч харагдаж байна.</p>
   <div class="artist-grid"><a *ngFor="let artist of artists" class="artist-card" routerLink="/home" fragment="download" [attr.aria-label]="artist.name + ' — апп дээрээс үнэ, боломжит өдрийг харах'"><div class="artist-image"><img [src]="artist.image" [alt]="artist.name" loading="lazy" width="600" height="600"><span class="artist-open"><app-icon name="arrow-up-right"></app-icon></span></div><div class="artist-caption"><div><p>{{ artist.category }}</p><h3>{{ artist.name }}</h3></div><app-icon name="arrow-right"></app-icon></div></a></div>
@@ -28,18 +28,18 @@
 <section class="steps-section" id="how-it-works" aria-labelledby="steps-title"><div class="container section">
   <div class="section-heading"><div><p class="eyebrow">ХЯЛБАР ЗАХИАЛГА</p><h2 id="steps-title">Ердөө <br>Дөрөвхөн алхам</h2></div><a class="text-link" routerLink="/question">Түгээмэл асуултууд <app-icon name="arrow-up-right"></app-icon></a></div>
   <div class="steps-grid">
-    <div class="step"><div class="step-top"><span>01</span><app-icon name="download"></app-icon></div><h3>Аппаа татаарай</h3><p>ArtisyHub аппликейшнийг App Store, Google Play-ээс үнэгүй татна.</p></div>
-    <div class="step"><div class="step-top"><span>02</span><app-icon name="search"></app-icon></div><h3>Уран бүтээлчээ сонго</h3><p>Үйлчилгээний үнэ, мэдээлэл болон боломжит өдөр, цагийг харьцуулаарай.</p></div>
-    <div class="step"><div class="step-top"><span>03</span><app-icon name="send"></app-icon></div><h3>Хүсэлтээ илгээ</h3><p>Арга хэмжээний мэдээллээ оруулна. Уран бүтээлч таны хүсэлтэд хариу өгнө.</p></div>
-    <div class="step"><div class="step-top"><span>04</span><app-icon name="check"></app-icon></div><h3>Захиалгаа баталгаажуул</h3><p>Зөвшөөрсөн хариу ирсний дараа төлбөрөө төлж захиалгаа баталгаажуулна.</p></div>
+    <div class="step"><div class="step-top"><span>01</span><app-icon name="download"></app-icon></div><h3>Аппаа татна</h3><p>ArtisyHub аппликейшнийг App Store, Google Play-ээс үнэгүй татна.</p></div>
+    <div class="step"><div class="step-top"><span>02</span><app-icon name="search"></app-icon></div><h3>Уран бүтээлчээ сонгоно</h3><p>Үйлчилгээний үнэ, мэдээлэл болон боломжит өдөр, цагийг харьцуулаарай.</p></div>
+    <div class="step"><div class="step-top"><span>03</span><app-icon name="send"></app-icon></div><h3>Хүсэлтээ илгээнэ</h3><p>Арга хэмжээний мэдээллээ оруулна. Уран бүтээлч өөрийн апп дээрээс таны хүсэлтэд хариу өгнө.</p></div>
+    <div class="step"><div class="step-top"><span>04</span><app-icon name="check"></app-icon></div><h3>Захиалгаа баталгаажуулна</h3><p>Зөвшөөрсөн хариу ирсний дараа төлбөрөө төлж захиалгаа баталгаажуулна.</p></div>
   </div>
 </div></section>
 <section class="container section"><div class="trust-panel">
-  <div class="trust-copy"><p class="eyebrow light">ИТГЭЛЦЛЭЭС ЭХЛЭХ ЗАХИАЛГА</p><h2>Та мөчөө бүтээ.<br>Төлбөрөө тайван шийд.</h2><p>Үйлчилгээ үзүүлж, захиалагч баталгаажуулсны дараа төлбөр уран бүтээлчид шилжинэ.</p><a class="button button-white" routerLink="/advantage">ArtisyHub-ийн давуу тал <app-icon name="arrow-up-right"></app-icon></a></div>
+  <div class="trust-copy"><p class="eyebrow light">ИТГЭЛЦЛЭЭС ЭХЛЭХ ЗАХИАЛГА</p><h2>Бид зуучлагч биш<br>Таны эрсдэлийг даах систем</h2><p>Үйлчилгээ үзүүлж, захиалагч баталгаажуулсны дараа төлбөр уран бүтээлчид шилжинэ.</p><a class="button button-white" routerLink="/advantage">ArtisyHub-ийн давуу тал <app-icon name="arrow-up-right"></app-icon></a></div>
   <div class="trust-features"><div><span class="feature-icon"><app-icon name="shield"></app-icon></span><div><h3>Баталгаатай төлбөр</h3><p>Захиалгын төлбөр платформд хадгалагдана.</p></div></div><div><span class="feature-icon"><app-icon name="calendar"></app-icon></span><div><h3>Ойлгомжтой захиалга</h3><p>Үнэ, өдөр, цагийн мэдээллээ урьдчилан харна.</p></div></div><div><span class="feature-icon"><app-icon name="receipt"></app-icon></span><div><h3>eBarimt авах боломжтой</h3><p>Хувь хүн эсвэл байгууллага дээрээ баримт авна.</p></div></div></div>
 </div></section>
 <section class="container voices-section" aria-labelledby="voices-title">
-  <div class="section-heading"><div><p class="eyebrow">УРАН БҮТЭЭЛЧДИЙН ҮГ</p><h2 id="voices-title">Хамтдаа бүтээж буй итгэл.</h2></div></div>
+  <div class="section-heading"><div><p class="eyebrow">УРАН БҮТЭЭЛЧДИЙН СЭТГЭГДЭЛ</p><h2 id="voices-title">Хамтдаа бүтээж буй итгэл.</h2></div></div>
   <div class="quotes-grid">
     <figure class="quote-card"><span class="quote-mark" aria-hidden="true">“</span><blockquote>Уран бүтээлч захиалагч нарын гүүр болсон үнэхээр сайхан аппликейшн.</blockquote><figcaption><img src="assets/artists/tanhai.jpg" alt="" width="52" height="52" loading="lazy"><div><strong>Танхай ерөөлч</strong><span>Уран бүтээлч</span></div></figcaption></figure>
     <figure class="quote-card"><span class="quote-mark" aria-hidden="true">“</span><blockquote>Санхүүгийн мэдээлэл нь ил тод. Бид ч бас өөрсдийн үнэ, мэдээллээ давхар хянаад явах боломжтой.</blockquote><figcaption><img src="assets/artists/aagiimaa.jpg" alt="" width="52" height="52" loading="lazy"><div><strong>Агиймаа</strong><span>Дуучин</span></div></figcaption></figure>
