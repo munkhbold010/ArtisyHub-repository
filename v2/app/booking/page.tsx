@@ -31,10 +31,10 @@ export default function BookingPage() {
         <div className="booking-layout">
           <section className="form-card">
             <div className="booking-artist">
-              <Image src="/host.webp" width={90} height={78} alt="Хөтлөгч" />
+              <Image src="/app-logo.png" width={90} height={78} alt="Демо артист" />
               <div>
-                <span className="category-pill static">Хөтлөгч</span>
-                <h2>Б. Тэмүүлэн</h2>
+                <span className="category-pill static">Демо артист</span>
+                <h2>Демо артист</h2>
                 <p>4 цагийн хөтлөлт</p>
               </div>
             </div>

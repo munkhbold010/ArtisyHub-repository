@@ -29,27 +29,27 @@ export default function AdminPage() {
           <div className="admin-detail-head">
             <div>
               <span className="status pending">Шинэ артистын хүсэлт</span>
-              <h2>Б. Тэмүүлэн · Хөтлөгч</h2>
+              <h2>Демо артист · Хөтлөгч</h2>
               <p>2026.10.04 · 16:05</p>
             </div>
-            <Image src="/host.webp" width={130} height={100} alt="Артист" />
+            <Image src="/app-logo.png" width={130} height={100} alt="Демо артист" />
           </div>
 
           <div className="detail-grid">
             <div>
               <h3>Хувийн мэдээлэл</h3>
               <dl>
-                <dt>Албан нэр</dt><dd>Бат-Эрдэнийн Тэмүүлэн</dd>
+                <dt>Албан нэр</dt><dd>Демо артистын албан нэр</dd>
                 <dt>Регистр</dt><dd>УБ•••••••• · <strong>Verified</strong></dd>
                 <dt>Утас</dt><dd>99••••22</dd>
-                <dt>И-мэйл</dt><dd>temuulen@example.com</dd>
+                <dt>И-мэйл</dt><dd>artist@example.com</dd>
               </dl>
             </div>
             <div>
               <h3>Банк</h3>
               <dl>
                 <dt>Банк</dt><dd>ХААН Банк</dd>
-                <dt>Данс эзэмшигч</dt><dd>БАТ-ЭРДЭНИЙН ТЭМҮҮЛЭН</dd>
+                <dt>Данс эзэмшигч</dt><dd>ДЕМО ДАНС ЭЗЭМШИГЧ</dd>
                 <dt>Данс</dt><dd>•••• •••• 4587</dd>
                 <dt>Төлөв</dt><dd><strong>Verified</strong></dd>
               </dl>

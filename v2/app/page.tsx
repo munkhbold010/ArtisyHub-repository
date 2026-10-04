@@ -1,16 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArtistCard } from "../components/ArtistCard";
 import { Header } from "../components/Header";
-
-const artists = [
-  { name: "Б. Тэмүүлэн", category: "Хөтлөгч", image: "/host.webp", price: "450,000₮-с", description: "Хурим, байгууллагын арга хэмжээ, шинэ жилийн хөтлөлт.", rating: "★ 4.9" },
-  { name: "Номин", category: "Дуучин", image: "/singer.webp", price: "600,000₮-с", description: "3–5 дууны тайзны тоглолтын багц.", rating: "★ 5.0" },
-  { name: "Motive", category: "Хамтлаг", image: "/band.webp", price: "1,200,000₮-с", description: "Амьд хөгжмийн тоглолт, байгууллагын эвент.", rating: "★ 4.8" },
-  { name: "Rock Set", category: "Хөгжимчин", image: "/rock.webp", price: "800,000₮-с", description: "Амьд хөгжмийн сет, тусгай хөтөлбөр.", rating: "★ 4.7" }
-];
-
-const categories = ["Бүгд", "Хөтлөгч", "Дуучин", "Хөгжимчин", "Бүжигчин", "DJ", "Комедиан", "Илбэчин"];
+import { HomeArtists } from "../components/HomeArtists";
 
 export default function HomePage() {
   return (
@@ -27,8 +18,8 @@ export default function HomePage() {
               <Link href="/artist/register" className="secondary-button">Уран бүтээлчээр нэгдэх</Link>
             </div>
           </div>
-          <div className="hero-media">
-            <Image src="/hero.webp" alt="ArtisyHub уран бүтээлчид" fill priority sizes="(max-width: 900px) 100vw, 50vw" />
+          <div className="hero-media app-mockup">
+            <Image src="/app-mockup.png" alt="ArtisyHub аппликейшн" fill priority sizes="(max-width: 900px) 100vw, 50vw" />
           </div>
         </section>
 
@@ -47,14 +38,7 @@ export default function HomePage() {
           <button className="primary-button">Хайх</button>
         </section>
 
-        <section className="shell section" id="artists">
-          <div className="section-heading">
-            <div><span className="eyebrow dark">ARTISTS</span><h2>Уран бүтээлчид</h2></div>
-            <p>Үнэ, багц, нэмэлт мэдээлэл шууд харагдана.</p>
-          </div>
-          <div className="chips">{categories.map((x, i) => <button className={i === 0 ? "active" : ""} key={x}>{x}</button>)}</div>
-          <div className="artist-grid">{artists.map((artist) => <ArtistCard key={artist.name} {...artist} />)}</div>
-        </section>
+        <HomeArtists />
 
         <section className="shell trust-grid">
           <article><span>01</span><h3>Ил тод үнэ</h3><p>Сонгосон бүсийн бүх зардал багцын үнэд шингэнэ.</p></article>
