@@ -5,12 +5,14 @@ This directory is the isolated V2 workspace.
 ## Safety
 - `main` remains untouched.
 - Active development happens on `v2-development`.
-- Production deployment is not triggered from this directory unless explicitly approved.
+- The V2 Vercel project uses `v2` as its Root Directory.
+- The V2 framework preset is Next.js.
+- Existing production `artisyhub.mn` remains on the legacy project until a separate migration is explicitly approved.
 
 ## Target architecture
 - Backend: Python + PostgreSQL
-- Web: customer-facing web
-- Admin: admin dashboard
+- Web: Next.js + TypeScript
+- Admin: Next.js + TypeScript
 - Mobile: Flutter
 - Integrations: QPay, Khan Bank Corporate Gateway, CallPro
 - eBarimt/POSAPI: paused until the current technology company shares its code
@@ -23,4 +25,4 @@ This directory is the isolated V2 workspace.
 - Direct bank payment: artist 95%, ArtisyHub 5%
 
 ## Workflow
-Changes should be made as focused commits. Test builds are produced only when requested.
+Changes are made as focused commits on `v2-development`. Vercel deploys that branch to the separate V2 project for review.
