@@ -45,7 +45,7 @@ export function Header() {
 
         <nav className="main-nav" aria-label="Үндсэн цэс">
           <Link href="/">Уран бүтээлч</Link>
-          <Link href="/restaurant-manager">Ресторан</Link>
+          <Link href="/restaurants">Ресторан</Link>
           <Link href="/artist/register">Уран бүтээлчээр нэгдэх</Link>
           {session ? (
             <Link href="/account" className="nav-cta account-link">

@@ -14,7 +14,7 @@ type ZoneId = (typeof zones)[number]["id"];
 
 const artists = [
   {
-    name: "Сэрчмаа",
+    slug: "selly",\n    name: "Сэрчмаа",
     category: "Дуучин",
     image: "/selly.jpg",
     description: "Тоглолт, арга хэмжээний дуучны багц.",
@@ -22,7 +22,7 @@ const artists = [
     prices: { city: 600000, near: 750000, rural: 1100000, far: 1500000 },
   },
   {
-    name: "Агиймаа",
+    slug: "aagiimaa",\n    name: "Агиймаа",
     category: "Дуучин",
     image: "/aagiimaa.jpg",
     description: "Арга хэмжээ, байгууллагын эвентэд зориулсан багц.",
@@ -30,7 +30,7 @@ const artists = [
     prices: { city: 700000, near: 850000, rural: 1200000, far: 1650000 },
   },
   {
-    name: "Лхагва /Мөнхийн реп/",
+    slug: "lhgwa",\n    name: "Лхагва /Мөнхийн реп/",
     category: "Дуучин",
     image: "/lhgwa.jpg",
     description: "Тайзны тоглолт, арга хэмжээний багц.",
@@ -38,7 +38,7 @@ const artists = [
     prices: { city: 650000, near: 800000, rural: 1150000, far: 1550000 },
   },
   {
-    name: "YoungSub",
+    slug: "youngsub",\n    name: "YoungSub",
     category: "Дуучин",
     image: "/youngsub.jpg",
     description: "Тоглолт болон тусгай арга хэмжээний багц.",

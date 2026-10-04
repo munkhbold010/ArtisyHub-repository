@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { MobileNav } from "../components/MobileNav";
 
 export const metadata: Metadata = {
   title: "ArtisyHub V2",
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="mn">
-      <body>{children}</body>
+      <body>{children}<MobileNav /></body>
     </html>
   );
 }

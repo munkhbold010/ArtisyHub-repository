@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 type Props = {
+  slug: string;
   name: string;
   category: string;
   image: string;
@@ -10,9 +11,9 @@ type Props = {
   rating?: string;
 };
 
-export function ArtistCard({ name, category, image, price, description, rating }: Props) {
+export function ArtistCard({ slug, name, category, image, price, description, rating }: Props) {
   return (
-    <Link href="/booking" className="artist-card">
+    <Link href={"/artist/" + slug} className="artist-card">
       <div className="artist-photo">
         <Image src={image} alt={name} fill sizes="(max-width: 700px) 80vw, 300px" />
         <span className="category-pill">{category}</span>
