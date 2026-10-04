@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Header } from "../../components/Header";
+import { TEST_ACCOUNTS, TEST_OTP, resolveTestSession, roleHome, roleLabel } from "../../lib/testAccounts";
 
 const SESSION_KEY = "artisyhub_v2_session";
 
@@ -12,6 +13,13 @@ export default function LoginPage() {
   const [phone, setPhone] = useState("");
   const [otp, setOtp] = useState("");
   const [error, setError] = useState("");
+
+  function chooseTestAccount(value: string) {
+    setPhone(value);
+    setOtp("");
+    setError("");
+    setStep("phone");
+  }
 
   function requestOtp(e: FormEvent) {
     e.preventDefault();
@@ -28,14 +36,15 @@ export default function LoginPage() {
   function verifyOtp(e: FormEvent) {
     e.preventDefault();
     setError("");
-    if (otp !== "123456") {
+    if (otp !== TEST_OTP) {
       setError("Preview тестийн OTP код 123456.");
       return;
     }
 
-    localStorage.setItem(SESSION_KEY, JSON.stringify({ phone }));
+    const session = resolveTestSession(phone);
+    localStorage.setItem(SESSION_KEY, JSON.stringify(session));
     window.dispatchEvent(new Event("artisyhub-auth-change"));
-    router.push("/account");
+    router.push(roleHome(session.role));
     router.refresh();
   }
 
@@ -50,7 +59,22 @@ export default function LoginPage() {
 
           {step === "phone" ? (
             <>
-              <p>Бүртгэлтэй дугаар бол нэвтэрнэ. Шинэ дугаар бол OTP баталгаажсаны дараа бүртгэл автоматаар үүснэ.</p>
+              <p>Тестийн 3 тогтмол аккаунтаас сонгож болно. Бусад 8 оронтой дугаар preview дээр захиалагчийн аккаунт гэж үүснэ.</p>
+
+              <div className="test-account-grid">
+                {Object.values(TEST_ACCOUNTS).map((account) => (
+                  <button
+                    type="button"
+                    key={account.phone}
+                    className={"test-account-card " + (phone === account.phone ? "selected" : "")}
+                    onClick={() => chooseTestAccount(account.phone)}
+                  >
+                    <span>{roleLabel(account.role)}</span>
+                    <strong>{account.phone}</strong>
+                  </button>
+                ))}
+              </div>
+
               <form onSubmit={requestOtp} className="auth-form">
                 <label>
                   Утасны дугаар
@@ -61,7 +85,7 @@ export default function LoginPage() {
                       onChange={(e) => setPhone(e.target.value.replace(/\D/g, "").slice(0, 8))}
                       inputMode="numeric"
                       autoComplete="tel"
-                      placeholder="99112233"
+                      placeholder="88111111"
                       autoFocus
                     />
                   </div>
@@ -72,7 +96,7 @@ export default function LoginPage() {
             </>
           ) : (
             <>
-              <p><strong>+976 {phone}</strong> дугаар руу 6 оронтой баталгаажуулах код илгээнэ.</p>
+              <p><strong>+976 {phone}</strong> дугаарын тест нэвтрэлтийг баталгаажуулна.</p>
               <form onSubmit={verifyOtp} className="auth-form">
                 <label>
                   OTP код
@@ -85,7 +109,7 @@ export default function LoginPage() {
                     autoFocus
                   />
                 </label>
-                <div className="preview-otp-note">Preview тестийн код: <strong>123456</strong>. Бодит SMS одоохондоо илгээгдэхгүй.</div>
+                <div className="preview-otp-note">Бүх тест аккаунтын OTP: <strong>123456</strong>. Бодит SMS илгээгдэхгүй.</div>
                 {error && <div className="auth-error">{error}</div>}
                 <button className="primary-button full-button" type="submit">Нэвтрэх</button>
                 <button className="text-button" type="button" onClick={() => { setStep("phone"); setOtp(""); setError(""); }}>Дугаар солих</button>
@@ -93,7 +117,7 @@ export default function LoginPage() {
             </>
           )}
 
-          <div className="auth-footnote">Уран бүтээлчдийн профайл, үнэ, багцыг нэвтрэхгүйгээр үзэж болно. Захиалгын хүсэлт илгээх үед л нэвтрэлт шаардлагатай.</div>
+          <div className="auth-footnote">Тестийн дүрүүд тусдаа: 99111111 — уран бүтээлч, 88111111 — захиалагч, 77111111 — рестораны менежер.</div>
         </section>
       </main>
     </>

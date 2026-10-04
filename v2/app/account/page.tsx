@@ -4,23 +4,28 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Header } from "../../components/Header";
+import type { TestSession } from "../../lib/testAccounts";
+import { roleHome, roleLabel } from "../../lib/testAccounts";
 
 const SESSION_KEY = "artisyhub_v2_session";
 
 export default function AccountPage() {
   const router = useRouter();
-  const [phone, setPhone] = useState<string | null>(null);
+  const [session, setSession] = useState<TestSession | null>(null);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     try {
       const raw = localStorage.getItem(SESSION_KEY);
-      const session = raw ? JSON.parse(raw) : null;
-      setPhone(session?.phone ?? null);
+      const value: TestSession | null = raw ? JSON.parse(raw) : null;
+      setSession(value);
+      if (value && value.role !== "customer") {
+        router.replace(roleHome(value.role));
+      }
     } finally {
       setLoaded(true);
     }
-  }, []);
+  }, [router]);
 
   function logout() {
     localStorage.removeItem(SESSION_KEY);
@@ -33,7 +38,7 @@ export default function AccountPage() {
     return <><Header /><main className="shell account-page"><div className="form-card">Уншиж байна...</div></main></>;
   }
 
-  if (!phone) {
+  if (!session) {
     return (
       <>
         <Header />
@@ -53,27 +58,27 @@ export default function AccountPage() {
       <Header />
       <main className="shell account-page">
         <div className="page-intro">
-          <span className="eyebrow dark">MY ARTISYHUB</span>
+          <span className="eyebrow dark">CUSTOMER ACCOUNT</span>
           <h1>Миний хэсэг</h1>
-          <p>Захиалга, артистын бүртгэл, ресторантай холбоотой эрхүүд нэг аккаунтад байна.</p>
+          <p>Захиалагчийн хүсэлт, баталгаажсан захиалга, төлбөрийн төлөв энд харагдана.</p>
         </div>
 
         <div className="account-grid">
           <section className="form-card account-profile-card">
-            <div className="account-avatar">{phone.slice(0, 2)}</div>
+            <div className="account-avatar">{session.phone.slice(0, 2)}</div>
             <div>
-              <span className="muted-label">Нэвтэрсэн дугаар</span>
-              <h2>+976 {phone}</h2>
+              <span className="muted-label">{roleLabel(session.role)}</span>
+              <h2>+976 {session.phone}</h2>
               <span className="status verified">Идэвхтэй session</span>
             </div>
           </section>
 
           <section className="form-card">
-            <h2>Хурдан холбоос</h2>
+            <h2>Захиалагчийн тест</h2>
             <div className="account-links">
-              <Link href="/booking">Захиалга хийх</Link>
-              <Link href="/artist/register">Уран бүтээлчийн мэдээлэл</Link>
-              <Link href="/restaurant-manager">Рестораны менежер</Link>
+              <Link href="/">Уран бүтээлч сонгох</Link>
+              <Link href="/booking">Захиалгын урсгал шалгах</Link>
+              <Link href="/restaurants">Ресторан хайх</Link>
             </div>
           </section>
         </div>

@@ -3,23 +3,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import type { TestSession } from "../lib/testAccounts";
+import { roleHome } from "../lib/testAccounts";
 
 const SESSION_KEY = "artisyhub_v2_session";
 
-type Session = { phone: string } | null;
-
 export function Header() {
-  const [session, setSession] = useState<Session>(null);
+  const [session, setSession] = useState<TestSession | null>(null);
 
   useEffect(() => {
-    try {
-      const raw = localStorage.getItem(SESSION_KEY);
-      setSession(raw ? JSON.parse(raw) : null);
-    } catch {
-      setSession(null);
-    }
-
-    const onStorage = () => {
+    const readSession = () => {
       try {
         const raw = localStorage.getItem(SESSION_KEY);
         setSession(raw ? JSON.parse(raw) : null);
@@ -28,11 +21,12 @@ export function Header() {
       }
     };
 
-    window.addEventListener("storage", onStorage);
-    window.addEventListener("artisyhub-auth-change", onStorage as EventListener);
+    readSession();
+    window.addEventListener("storage", readSession);
+    window.addEventListener("artisyhub-auth-change", readSession as EventListener);
     return () => {
-      window.removeEventListener("storage", onStorage);
-      window.removeEventListener("artisyhub-auth-change", onStorage as EventListener);
+      window.removeEventListener("storage", readSession);
+      window.removeEventListener("artisyhub-auth-change", readSession as EventListener);
     };
   }, []);
 
@@ -48,7 +42,7 @@ export function Header() {
           <Link href="/restaurants">Ресторан</Link>
           <Link href="/artist/register">Уран бүтээлчээр нэгдэх</Link>
           {session ? (
-            <Link href="/account" className="nav-cta account-link">
+            <Link href={roleHome(session.role)} className="nav-cta account-link">
               <span className="account-dot" />
               {session.phone.slice(0, 2)}••••{session.phone.slice(-2)}
             </Link>
